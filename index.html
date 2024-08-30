@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Hello, Chammy 💖</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/*</span><br />
+			<span class="space"/><span class="comments">*2022—04-12</span><br />
+			<!--<span class="space"/><span class="comments">*2022-04-12.</span><br /> -->
+			<span class="space"/><span class="comments">*/</span><br />
+			Boy name = <span class="keyword">Mr</span> Variable<br />
+			Girl name = <span class="keyword">Mrs</span> Tinny<br />
+			<span class="comments">// Meet for the first time in Genshin </span><br />
+			The boy liked the girl very much;<br />
+			<span class="comments">// He started loving her as days passed on.</span><br />
+			She started loving him too;<br />
+			<span class="comments">// AS time goes on.</span><br />
+			He cannot be separated from her;<br />
+			<span class="comments">// At the same time.</span><br />
+			He thought that she can't be separated from me either;<br />
+			<span class="comments">// Both wind and snow all over the sky.</span><br />
+			<span class="comments">// Whether on foot or 5 kilometers.</span><br />
+			<span class="keyword">He was </span> very <span class="keyword">happy to find my first love</span>;<br />
+			<span class="keyword">She was</span>also very <span class="keyword">happy</span>;<br />
+			<span class="placeholder"/><span class="comments">// Whether it is right now</span><br />
+			<span class="placeholder"/><span class="comments">// Still in the distant future.</span><br />
+			<span class="placeholder"/>He had but one dream;<br />
+			<span class="comments">// He wanted to keep her happy forever but he messed up.</span><br />
+			<br>
+			<br>
+			I want to say:<br />
+			Tinny, I will love you forever;<br />
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					Cutie,This is our time together.
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					Love You forever,<br/>
+					<div class="signature"> Ad**** (you know the rest)</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="copyright">
+		<a href="#">....</a><br />
+		<a href="#">....</a><br />
+		
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2022,4,12);
+together.setHours(0);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+<embed src="http://www.ytmp3.cn/down/39154.mp3" autostart="true" loop="true" hidden="true">
+</embed> 
+</body>
+</html>
